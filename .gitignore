@@ -1,0 +1,7 @@
+# Ignore all node_modules
+node_modules/
+
+# Except the mediapipe files the extension needs at runtime
+!node_modules/@mediapipe/
+!node_modules/@mediapipe/tasks-vision/
+!node_modules/@mediapipe/tasks-vision/**

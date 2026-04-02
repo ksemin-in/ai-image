@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pose Monitor</title>
+    <style>
+        body { font-family: sans-serif; padding: 15px; background: #fafafa; }
+        .card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; background: white; text-align: center; }
+        button { width: 100%; padding: 10px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        video { width: 100%; margin-top: 10px; border-radius: 4px; display: none; }
+        #status { margin-top: 10px; font-size: 14px; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h3>Posture Monitor</h3>
+        <p>Monitoring runs in the background every 0.5s.</p>
+        <button id="activate">Start Monitoring</button>
+        <video id="preview" autoplay muted></video>
+        <p id="status">Status: Waiting</p>
+    </div>
+    <script src="sidepanel.js"></script>
+</body>
+</html>

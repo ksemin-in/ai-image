@@ -1,0 +1,35 @@
+{
+  "name": "Pose_Monitoring",
+  "description": "A Chrome extension for monitoring pose and providing feedback.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "videoCapture",
+    "storage",
+    "notifications",
+    "offscreen",
+    "sidePanel"
+  ],
+  "side_panel" : {
+    "default_path": "sidepanel.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action" : {
+    "default_title": "Pose Monitoring"
+    },
+    "web_accessible_resources": [
+    {
+      "resources": [
+        "node_modules/@mediapipe/tasks-vision/wasm/*",
+        "models/*.task"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  }
+  
+}
